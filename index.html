@@ -7,22 +7,28 @@
 body {
 	background-color: #333333;
 }
+.navbar-background-color {
+	background-color: #222222;
+}
 .navbar-logo {
-	max-width: 250px;
+	max-width: 175px;
+}
+.navtext-align {
+	align-items: end;
 }
 </style>
 </head>
 
 <body>
-<div class= "container-fluid">
-<nav class="navbar navbar-expand-sm navbar-dark">
+<div class= "container-fluid px-0">
+<nav class="navbar navbar-expand-sm navbar-dark navtext-align navbar-background-color">
   <a class="navbar-brand" href="#"><img src="logo.png" class= "navbar-logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -48,8 +54,21 @@ body {
     </ul>
   </div>
 </nav>
-<div class= "row">
 
+<div id="home-container">
+	<div class= "row">
+		<div class= "col-sm-10 col-lg-8 mx-auto">
+			<img src="whitelogo.png" style="max-width:100%">
+		</div>
+	</div>
+</div>
+
+<div id="contact-container">
+	<div class="row">
+		<div class="mx-auto">
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeixHfrqdrlwA0TsU3nj7TudAG07t78Ikw_y7cR3zSE8iQ_Aw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+		</div>
+	</div>
 </div>
 
 </div>
