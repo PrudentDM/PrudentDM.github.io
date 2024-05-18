@@ -75,6 +75,16 @@ body {
 	</div>
 </div>
 
+<div id="gallery-container" class="pagecontainer hidden-pagecontainer">
+	<div class="row mx-0">
+		<div class="mx-auto">
+			<!--
+				https://app.behold.so/try/
+			-->
+		</div>
+	</div>
+</div>
+
 </div>
 
 
@@ -103,41 +113,33 @@ var showPageContainer = function(pageContainerId)
 	$(pageContainerId).removeClass('hidden-pagecontainer');
 }
 
+//Function to handle changing pages
+var changePage = function(eventTarget)
+{
+	let PAGE_CONTAINER_ENUM = {
+		'home-navitem': '#home-container',
+		'contact-navitem': '#contact-container',
+		'gallery-navitem': '#gallery-container'
+	};
+	
+	//Get the parent li
+	let navitemLi = $(eventTarget).parent();
+	
+	//Set it active
+	setNavitemActive($(navitemLi));
+	
+	//Show the correct pagecontainer
+	showPageContainer(PAGE_CONTAINER_ENUM[event.target.id]);
+}
+
 //Set up click event listener for the nav bar to "change pages"
 document.addEventListener('click', function(event){
-	if(event.target.matches('#home-navitem'))
+	//If any of the navitems get clicked, call changePage() and pass the event.target as the argument
+	if(event.target.matches('#home-navitem, #contact-navitem, #gallery-navitem'))
 	{
-		//Get the parent li
-		let navitemLi = $(event.target).parent();
-		
-		//Set it active
-		setNavitemActive($(navitemLi));
-		
-		//Show the correct pagecontainer
-		showPageContainer('#home-container');
+		changePage(event.target);
 	}
-	
-	if(event.target.matches('#contact-navitem'))
-	{
-		//Get the parent li
-		let navitemLi = $(event.target).parent();
-		
-		//Set it active
-		setNavitemActive($(navitemLi));
-		
-		//Show the correct pagecontainer
-		showPageContainer('#contact-container');
-	}
-	
-	if(event.target.matches('#gallery-navitem'))
-	{
-		//Get the parent li
-		let navitemLi = $(event.target).parent();
-		
-		//Set it active
-		setNavitemActive($(navitemLi));
-	}
-	
+
 }, false);
 
 </script>
