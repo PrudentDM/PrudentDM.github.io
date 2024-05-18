@@ -16,6 +16,9 @@ body {
 .navtext-align {
 	align-items: end;
 }
+.hidden-pagecontainer {
+	display: none;
+}
 </style>
 </head>
 
@@ -30,10 +33,10 @@ body {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" id="home-navitem">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#" id="contact-navitem">Contact</a>
       </li>
 	  <!--
       <li class="nav-item dropdown">
@@ -49,13 +52,13 @@ body {
       </li>
 	  -->
       <li class="nav-item">
-        <a class="nav-link" href="#">Gallery</a>
+        <a class="nav-link" href="#" id="gallery-navitem">Gallery</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<div id="home-container">
+<div id="home-container" class="pagecontainer">
 	<div class= "row">
 		<div class= "col-sm-10 col-lg-8 mx-auto">
 			<img src="whitelogo.png" style="max-width:100%">
@@ -63,7 +66,7 @@ body {
 	</div>
 </div>
 
-<div id="contact-container">
+<div id="contact-container" class="pagecontainer hidden-pagecontainer">
 	<div class="row">
 		<div class="mx-auto">
 			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeixHfrqdrlwA0TsU3nj7TudAG07t78Ikw_y7cR3zSE8iQ_Aw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
@@ -74,6 +77,69 @@ body {
 </div>
 
 
+<script>
+
+//Function to set navitem active
+var setNavitemActive = function(navitem)
+{
+	//Remove active from all nav items
+	$("#navbarSupportedContent > ul > li").removeClass('active');
+	
+	//Set the correct one as active
+	navitem.addClass('active');
+}
+
+//Function to show the correct page container
+var showPageContainer = function(pageContainerId)
+{
+	//Hide all page containers .hidden-pagecontainer
+	$(".pagecontainer").addClass('hidden-pagecontainer');
+	
+	//Set the correct one to display: block
+	$(pageContainerId).removeClass('hidden-pagecontainer');
+}
+
+//Set up click event listener for the nav bar to "change pages"
+document.addEventListener('click', function(event){
+	if(event.target.matches('#home-navitem'))
+	{
+		console.log("clicked home navitem");
+		//Get the parent li
+		let navitemLi = $(event.target).parent();
+		
+		//Set it active
+		setNavitemActive($(navitemLi));
+		
+		//Show the correct pagecontainer
+		showPageContainer('#home-container');
+	}
+	
+	if(event.target.matches('#contact-navitem'))
+	{
+		console.log("clicked contact navitem");
+		//Get the parent li
+		let navitemLi = $(event.target).parent();
+		
+		//Set it active
+		setNavitemActive($(navitemLi));
+		
+		//Show the correct pagecontainer
+		showPageContainer('#contact-container');
+	}
+	
+	if(event.target.matches('#gallery-navitem'))
+	{
+		console.log("clicked gallery navitem");
+		//Get the parent li
+		let navitemLi = $(event.target).parent();
+		
+		//Set it active
+		setNavitemActive($(navitemLi));
+	}
+	
+}, false);
+
+</script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
