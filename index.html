@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <title>Prudent Disaster Mitigation</title>
 <style>
@@ -59,7 +60,7 @@ body {
 </nav>
 
 <div id="home-container" class="pagecontainer">
-	<div class= "row">
+	<div class= "row mx-0">
 		<div class= "col-sm-10 col-lg-8 mx-auto">
 			<img src="whitelogo.png" style="max-width:100%">
 		</div>
@@ -67,9 +68,9 @@ body {
 </div>
 
 <div id="contact-container" class="pagecontainer hidden-pagecontainer">
-	<div class="row">
+	<div class="row mx-0">
 		<div class="mx-auto">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeixHfrqdrlwA0TsU3nj7TudAG07t78Ikw_y7cR3zSE8iQ_Aw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+			<iframe style="max-width: 100%" src="https://docs.google.com/forms/d/e/1FAIpQLSeixHfrqdrlwA0TsU3nj7TudAG07t78Ikw_y7cR3zSE8iQ_Aw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 		</div>
 	</div>
 </div>
@@ -87,6 +88,9 @@ var setNavitemActive = function(navitem)
 	
 	//Set the correct one as active
 	navitem.addClass('active');
+	
+	//Hide the mobile menu if open
+	$("#navbarSupportedContent").collapse('hide');
 }
 
 //Function to show the correct page container
@@ -103,7 +107,6 @@ var showPageContainer = function(pageContainerId)
 document.addEventListener('click', function(event){
 	if(event.target.matches('#home-navitem'))
 	{
-		console.log("clicked home navitem");
 		//Get the parent li
 		let navitemLi = $(event.target).parent();
 		
@@ -116,7 +119,6 @@ document.addEventListener('click', function(event){
 	
 	if(event.target.matches('#contact-navitem'))
 	{
-		console.log("clicked contact navitem");
 		//Get the parent li
 		let navitemLi = $(event.target).parent();
 		
@@ -129,7 +131,6 @@ document.addEventListener('click', function(event){
 	
 	if(event.target.matches('#gallery-navitem'))
 	{
-		console.log("clicked gallery navitem");
 		//Get the parent li
 		let navitemLi = $(event.target).parent();
 		
