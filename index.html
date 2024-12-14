@@ -52,6 +52,18 @@ body {
 .slideshow-img {
 	width: 25%;
 }
+.call-to-action img {
+	height: 0.8em; 
+	margin-top:-10px; 
+	margin-right: 5px;
+}
+.call-to-action a {
+	color: #444444;
+	text-decoration: underline;
+}
+.call-to-action a:hover {
+	color: #555555;
+}
 </style>
 </head>
 
@@ -81,7 +93,7 @@ body {
 <div id="home-container" class="pagecontainer container-fluid">
 	<div class= "row">
 		<div class= "col-sm-12 col-lg-12 mx-auto call-to-action">
-			<h1 class= "mx-auto my-auto">One Call Does It All <img style="height: 0.9em;" src="telephone-fill.svg"></h1><h1 class= "mx-auto my-auto">804-220-0812</h1>
+			<h1 class= "mx-auto my-auto">Call us, or use our <a href="#" id="contact-link">contact form</a> </h1><h1 class= "mx-auto my-auto"><img src="telephone-fill.svg">804-220-0812</h1>
 		</div>
 	</div>
 	<!--
@@ -96,7 +108,7 @@ body {
 			<ul>
 				<li>Master carpenter and IICRC Certified Technician on staff to protect your home</li>
 				<li>We will work with all insurance companies to fix water damage in your home (and more!)</li>
-				<li>Providing the following services to Williamsburg and the surrounding area:</li>
+				<li>Servicing Williamsburg and the surrounding areas</li>
 			</ul>
 		</div>
 	</div>
@@ -109,24 +121,24 @@ body {
 			Water damage comes in every shape and size
 		</h5>
 		</div>
-		<div class= "col-12 col-md-4 my-auto">
-			<img src="cabinets2.JPG" style="max-width:100%;"/>
+		<div class="col-12 col-md-4 my-auto pb-2">
+			<img src="wood_floor.jpg" style="max-width:100%;"/>
 		</div>
-		<div class= "col-12 col-md-4 my-auto">
+		<div class="col-12 col-md-4 my-auto pb-2">
 			<img src="water_damage.jpg" style="max-width:100%;" />
 		</div>
-		<div class= "col-12 col-md-4 my-auto">
+		<div class="col-12 col-md-4 my-auto pb-2">
 			<img src="floor_damage.jpg" style="max-width:100%;" />
 		</div>
 	</div>
 	<div class= "row mx-0 mt-3 service-row">
-		<div class= "col-12 col-md-4"><img style="max-width: 100%" src="williamsburg_stock.jpg"/></div>
-		<div class= "col-12 col-md-8 my-auto big-text">Servicing Williamsburg and surrounding area</div>
+		<div class= "col-12 col-md-8 my-auto order-md-2"><h5>Tear out water-damaged material and expose the savable water-damaged structure</h5></div>
+		<div class= "col-12 col-md-4"><img style="max-width: 100%" src="subfloor.jpg"/></div>
 	</div>
 	
 	<div class= "row mx-0 mt-3 service-row">
-		<div class= "col-12 col-md-4 order-md-2"><img style="max-width: 100%" src="logo.png"/></div>
-		<div class= "col-12 col-md-8 pt-3">Test text here</div>
+		<div class= "col-12 col-md-8 my-auto"><h5>Test text here</h5></div>
+		<div class= "col-12 col-md-4"><img style="max-width: 100%" src="fans_and_dehus.jpg"/></div>
 	</div>
 	
 	<div class= "row mx-0 mt-3" style="border-top: 2px solid; border-color: black;">
@@ -237,12 +249,33 @@ var changePage = function(eventTarget)
 	showPageContainer(PAGE_CONTAINER_ENUM[event.target.id]);
 }
 
+var changeToPage = function(pageName)
+{
+	let PAGE_CONTAINER_ENUM = {
+		'home-navitem': '#home-container',
+		'contact-navitem': '#contact-container',
+		'gallery-navitem': '#gallery-container'
+	};
+	
+	let contactli = $("#contact-navitem").parent();
+	
+	//Set it active
+	setNavitemActive($(contactli));
+	
+	showPageContainer(PAGE_CONTAINER_ENUM[pageName]);
+};
+
 //Set up click event listener for the nav bar to "change pages"
 document.addEventListener('click', function(event){
 	//If any of the navitems get clicked, call changePage() and pass the event.target as the argument
 	if(event.target.matches('#home-navitem, #contact-navitem, #gallery-navitem'))
 	{
 		changePage(event.target);
+	}
+	
+	if(event.target.matches("#contact-link"))
+	{
+		changeToPage("contact-navitem");
 	}
 
 }, false);
