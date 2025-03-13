@@ -1,213 +1,328 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#dd071d">
-<meta name="msapplication-TileColor" content="#dd071d">
-<meta name="theme-color" content="#222222"><title>Prudent Disaster Mitigation</title>
-<style>
-body {
-	background-color: #333333;
-}
-.navbar-background-color {
-	background-color: #222222;
-}
-.navbar-logo {
-	max-height: 40px;
-}
-.navtext-align {
-	align-items: end;
-	font-size: 1.5em;
-}
-.hidden-pagecontainer {
-	display: none;
-}
-.call-to-action {
-	background-color: #999999;
-	text-align: center;
-	min-height: 100px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.service-row {
-	color: white;
-	background-color: #444444;
-	border-radius: 5px;
-	padding: 10px;
-}
-.service-row img {
-	border-radius: 5px;
-}
-.before-and-after-text {
-	color: white;
-}
-.big-text {
-	font-size: 1.5em;
-}
-.slideshow-img {
-	width: 25%;
-}
-.call-to-action img {
-	height: 0.8em; 
-	margin-top:-10px; 
-	margin-right: 5px;
-}
-.contact-link {
-	color: #444444;
-	text-decoration: underline;
-}
-.contact-link:hover {
-	color: #555555;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prudent Disaster Mitigation - Water Damage Restoration Experts</title>
+    <meta name="description" content="Prudent Disaster Mitigation provides expert water damage restoration services in Williamsburg and surrounding areas.  Over 55 years of experience, IICRC certified, and working with all insurance companies.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#dd071d">
+    <meta name="msapplication-TileColor" content="#dd071d">
+    <meta name="theme-color" content="#222222">
+
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+            background-color: #333; /* Consistent background */
+            color: #fff; /* White text on dark background */
+            line-height: 1.6; /* Improved readability */
+        }
+
+        .container-fluid {
+            padding-left: 0;  /* Remove default padding for full-width sections */
+            padding-right: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #222;
+        }
+        .navbar-brand img {
+            max-height: 40px; /* Keep logo consistent */
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 1.2rem; /* Slightly larger nav links */
+            margin-left: 1rem; /* Space out nav links */
+            transition: color 0.2s ease-in-out;  /* Smooth hover effect */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ddd; /* Lighter color on hover */
+        }
+        .navbar-nav .nav-item.active .nav-link {
+            font-weight: bold; /* Highlight active link */
+        }
+
+        /* Hero Section */
+        .hero {
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem; /* More padding for impact */
+        }
+        .hero h1 {
+            font-size: 3rem; /* Larger heading */
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary { /* Custom button styling */
+            background-color: #ffffff;
+            border-color: #aaaaaa;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #cccccc; 
+            border-color: #aaaaaa;
+			color: #444444;
+        }
+
+
+        /* Services Section */
+        .services {
+            background-color: #444;
+            padding: 3rem 0;
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        .service-card {
+            background-color: #555;
+            border: none;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5srem;
+            transition: transform 0.2s ease-in-out; /* Add a subtle hover effect */
+            height: 100%; /* Make cards equal height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover{
+            transform: translateY(-5px); /* Lift card slightly on hover */
+        }
+
+        .service-card img {
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            width: 100%;     /* Ensure images fill the card width */
+            height: 200px;   /* Set a fixed height for consistency */
+            object-fit: cover; /* Important:  Maintain aspect ratio and cover the area */
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #ddd; /* Slightly lighter text for descriptions */
+        }
+
+        /* Before & After Section */
+        .before-after {
+            padding: 3rem 0;
+            background-color: #333;
+        }
+        .before-after h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        .before-after-image {
+            border-radius: 10px;
+            overflow: hidden; /* Ensure images stay within rounded corners */
+            margin-bottom: 1rem;
+        }
+        .before-after-image img {
+            width: 100%;
+            height: auto;
+            display: block; /* Remove any extra spacing below image */
+        }
+
+        /* Call to Action Section */
+        .cta {
+            background-color: #999999;
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #444444;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .contact-link{
+            color: #444444;	text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        footer img{
+            max-width: 50%;
+        }
+        .hidden-pagecontainer {	display: none;}
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .service-card img {
+                height: auto; /* Allow image height to adjust on smaller screens */
+            }
+        }
+    </style>
 </head>
-
 <body>
-<div class= "container-fluid px-0">
-<nav class="navbar navbar-expand-sm navbar-dark navtext-align navbar-background-color sticky-top">
-  <a class="navbar-brand" href="#"><img src="navlogo.png" class= "navbar-logo"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" id="home-navitem">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" id="contact-navitem">Contact</a>
-      </li>
-      <!--<li class="nav-item">
-        <a class="nav-link" href="#" id="gallery-navitem">Gallery</a>
-      </li>-->
-    </ul>
-  </div>
-</nav>
+    <div class="container-fluid px-0">
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="navlogo.png" alt="Prudent Disaster Mitigation Logo" class="navbar-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" id="home-navitem">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="contact-navitem">Contact</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </nav>
 
-<div id="home-container" class="pagecontainer container-fluid">
-	<div class= "row">
-		<div class= "col-sm-12 col-lg-12 mx-auto call-to-action">
-			<h1 class= "mx-auto my-auto">Call us, or use our <a href="#" class="contact-link">contact form</a> </h1><h1 class= "mx-auto my-auto"><img src="telephone-fill.svg">804-220-0812</h1>
-		</div>
-	</div>
-	<!--
-	<div class= "row mx-0 mt-3 service-row">
-			<h3 class= "mx-auto my-auto"><u>Over 55 Years of Experience</u></h3>
-	</div>
-	-->
-	<div class= "row mx-0 mt-3 service-row">
-		<div class= "col-12 col-md-4"><img style="max-width: 100%" src="whitelogo.png"/></div>
-		<div class= "col-12 col-md-8 my-auto big-text">
-			<h2>Over 55 Years of Experience</h2>
-			<ul>
-				<li>Master carpenter and IICRC Certified Technician on staff to protect your home</li>
-				<li>We will work with all insurance companies to fix water damage in your home (and more!)</li>
-				<li>Servicing Williamsburg and the surrounding areas</li>
-			</ul>
-		</div>
-	</div>
-	<div class= "row mx-0 mt-3 service-row">
-		<div class="col-12">
-		<h1 class="text-center">
-			Our Services
-		</h1>
-		<h5 class="text-center mb-3">
-			Water damage comes in every shape and size
-		</h5>
-		</div>
-		<div class="col-12 col-md-4 my-auto pb-2">
-			<img src="wood_floor.jpg" style="width:100%;"/>
-		</div>
-		<div class="col-12 col-md-4 my-auto pb-2">
-			<img src="water_damage.jpg" style="width:100%;" />
-		</div>
-		<div class="col-12 col-md-4 my-auto pb-2">
-			<img src="floor_damage.jpg" style="width:100%;" />
-		</div>
-	</div>
-	<div class= "row mx-0 mt-3 service-row">
-		<div class= "col-12 col-md-8 my-auto order-md-2"><h5>Tear out water-damaged material and expose the savable water-damaged structure</h5></div>
-		<div class= "col-12 col-md-4"><img style="max-width: 100%" src="subfloor.jpg"/></div>
-	</div>
-	
-	<div class= "row mx-0 mt-3 service-row">
-		<div class= "col-12 col-md-8 my-auto"><h5>Then we use fans and dehumidifiers to dry out and save the remaining material</h5></div>
-		<div class= "col-12 col-md-4"><img style="max-width: 100%" src="fans_and_dehus.jpg"/></div>
-	</div>
-	
-	<div class= "row mx-0 mt-3" style="border-top: 2px solid; border-color: black;">
-		<div class="col-12 col-md-6" style="text-align: center; border-right: 2px solid; border-right-color: black;">
-			<h4 class= "before-and-after-text"><u>Before</u></h4>
-			<div class="card" style="width: 100%;">
-				<img class="card-img-top" src="cabinets2.JPG" alt="Before image of ruined house">
-				<!--
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				</div>
-				-->
-			</div>
-		</div>
-		<div class="col-12 col-md-6" style="text-align: center;">
-			<h4 class= "before-and-after-text"><u>After</u></h4>
-			<div class="card" style="width: 100%;">
-				<img class="card-img-top" src="cabinets4.JPG" alt="After image of restored house">
-				<!--
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				</div>
-				-->
-			</div>
-		</div>
-	</div>
-	<div class= "row mx-0 mt-3">
-		<div class= "col-sm-12 col-lg-12 mx-auto call-to-action" style="min-height: 0px;">
-			<h2 class= "mx-auto">Who We Are</h2>
-			<h5 class="mx-auto">Class A Contractor's License with RBC Specialty</h5>
-			<h5 class="mx-auto">IICRC Certified Firm in Water Restoration with WRT Certification</h5>
-			<h5 class="mx-auto">Bonded and Insured</h5>
-			<h3 class="mx-auto"><a href="#" class="contact-link">Contact Us</a> Today</h3>
-		</div>
-		<!--
-		<div class="col-12 pb-3 mx-auto call-to-action" style="padding-top:0px; min-height: 0px;">
-			Here is a few sentences to see
-		</div>
-		-->
-	</div>
-	<div class= "row mx-0 pt-3 pb-3" style="background-color: black;">
-		<div class="col-8 mx-auto">
-			<img src="whitelogo.png" style="max-width: 100%" />
-		</div>
-	</div>
-</div>
+        <div id="home-container" class="pagecontainer container-fluid">
+            <section class="hero">
+                <div class="container">
+                    <h1>Your Trusted Partner in Water Damage Restoration</h1>
+                    <p>Over 55 Years of Experience Serving Williamsburg and Surrounding Areas</p>
+                    <a href="#" class="btn btn-primary contact-link">Get a Free Estimate</a>
+                </div>
+            </section>
 
-<div id="contact-container" class="pagecontainer hidden-pagecontainer">
-	<div class="row mx-0">
-		<div class="mx-auto">
-			<iframe style="max-width: 100%" src="https://docs.google.com/forms/d/e/1FAIpQLSeixHfrqdrlwA0TsU3nj7TudAG07t78Ikw_y7cR3zSE8iQ_Aw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-		</div>
-	</div>
-</div>
+            <section class="services">
+                <div class="container">
+                    <h2>Our Services</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <div class="service-card">
+                                <img src="subfloor.jpg" alt="Water Damaged Wood Floor">
+                                <h3>Water Damage Assessment</h3>
+                                <p>Thorough inspection and evaluation of water damage to determine the extent of the problem.</p>
+                            </div>
+                        </div>
+						<!--
+                        <div class="col-md-4 mb-2">
+                            <div class="service-card">
+                                <img src="water_damage.jpg" alt="Water Damage">
+                                <h3>Water Extraction & Removal</h3>
+                                <p>Rapid removal of standing water using powerful pumps and extraction equipment.</p>
+                            </div>
+                        </div>
+						-->
+                        <div class="col-md-4 mb-2">
+                            <div class="service-card">
+                                <img src="floor_damage.jpg" alt="Damaged Floor">
+                                <h3>Drying & Dehumidification</h3>
+                                <p>Advanced drying techniques and dehumidifiers to prevent further damage.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="service-card">
+                                <img src="wood_floor.jpg" alt="Structural Drying">
+                                <h3>Structural Repair & Reconstruction</h3>
+                                <p>Expert carpentry and reconstruction services to restore your property to its pre-damage condition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<div id="gallery-container" class="pagecontainer hidden-pagecontainer">
-	<div class="row mx-0 mt-3">
-		<!--<div data-behold-id="gmNoj7njtFr9eRjBWd3K"></div>
-		<script>
-		  (() => {
-			const d=document,s=d.createElement("script");s.type="module";
-			s.src="https://w.behold.so/widget.js";d.head.append(s);
-		  })();
-		</script>--> 
-	</div>
-</div>
+            <section class="before-after">
+                <div class="container">
+                    <h2>Before & After</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="before-after-image">
+                                <img src="cabinets2.JPG" alt="Before Water Damage">
+                            </div>
+                            <h4 style="text-align: center;">Before</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="before-after-image">
+                                <img src="cabinets4.JPG" alt="After Water Damage Restoration">
+                            </div>
+                            <h4 style="text-align: center;">After</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-</div>
+            <section class="cta">
+                <div class="container">
+                    <h2>Contact Us Today</h2>
+                    <p>Don't wait, call us now for immediate assistance with your water damage emergency.</p>
+                    <p><img src="telephone-fill.svg" style="height: 0.8em; margin-top:-5px; margin-right: 5px;"> 804-220-0812</p>
 
+                    <p>Or use our convenient <a href="#" class="contact-link">contact form</a>.</p>
+
+                    <h5 class="mx-auto">Class A Contractor's License with RBC Specialty</h5>
+                    <h5 class="mx-auto">IICRC Certified Firm in Water Restoration with WRT Certification</h5>
+                    <h5 class="mx-auto">Bonded and Insured</h5>
+                </div>
+            </section>
+        </div>
+
+        <div id="contact-container" class="pagecontainer hidden-pagecontainer">
+            <div class="row mx-0">
+                <div class="mx-auto" style="max-width:640px;">
+                    <iframe style="max-width: 100%" src="https://docs.google.com/forms/d/e/1FAIpQLSeixHfrqdrlwA0TsU3nj7TudAG07t78Ikw_y7cR3zSE8iQ_Aw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+        </div>
+        <div id="gallery-container" class="pagecontainer hidden-pagecontainer">
+            <div class="row mx-0 mt-3">
+                </div>
+        </div>
+        <footer>
+            <div class="container">
+               <img src="whitelogo.png"/>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 
@@ -288,7 +403,6 @@ document.addEventListener('click', function(event){
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
